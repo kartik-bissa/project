@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - Gadget Zone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7fb;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        h1, h2 {
+            font-weight: 500;
+            color: #2c3e50;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* Navbar */
+        header {
+            background-color: #000000;
+            padding: 15px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brand {
+            color: #f39c12;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        .navbar-nav .nav-link {
+            color: #ecf0f1 !important;
+            font-weight: 500;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #f39c12 !important;
+        }
+
+        /* Create Account Section */
+        .create-account-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://static.scientificamerican.com/sciam/cache/file/0446505E-447E-4ECA-A5699DE89F708B8E_source.jpg?w=1200') no-repeat center center;
+            background-size: cover;
+        }
+
+        .create-account-form {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .create-account-form h2 {
+            font-size: 32px;
+            color: #34495e;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .create-account-form .form-control {
+            border-radius: 25px;
+            padding: 15px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .create-account-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .create-account-form .btn-primary {
+            background-color: #0e0c0d;
+            border-radius: 25px;
+            padding: 15px;
+            width: 100%;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .create-account-form .btn-primary:hover {
+            background-color: #e67e22;
+            transform: scale(1.05);
+        }
+
+        .create-account-form .login-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .create-account-form .login-link a {
+            color: #c70265;
+            text-decoration: none;
+        }
+
+        .create-account-form .login-link a:hover {
+            color: #e67e22;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Gadget Zone</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Create Account Section -->
+    <div class="create-account-container">
+        <div class="create-account-form">
+            <h2>Create Your Account</h2>
+            <form action="register-process.php" method="POST">
+                <!-- Name Input -->
+                <div class="form-group">
+                    <input type="text" class="form-control" name="name" placeholder="Full Name" required>
+                </div>
+                <!-- Email Input -->
+                <div class="form-group">
+                    <input type="email" class="form-control" name="email" placeholder="Email Address" required>
+                </div>
+                <!-- Password Input -->
+                <div class="form-group">
+                    <input type="password" class="form-control" name="password" placeholder="Password" required>
+                </div>
+                <!-- Confirm Password Input -->
+                <div class="form-group">
+                    <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Create Account</button>
+            </form>
+            <div class="login-link">
+                <p>Already have an account? <a href="loginpg.html">Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

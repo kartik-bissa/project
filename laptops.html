@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7fb;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        h1, h2 {
+            font-weight: 500;
+            color: #2c3e50;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* Navbar */
+        header {
+            background-color: #c70265;
+            padding: 15px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brand {
+            color: #f39c12;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        .navbar-nav .nav-link {
+            color: #ecf0f1 !important;
+            font-weight: 500;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #f39c12 !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://laptopworldindia.in/wp-content/uploads/2021/03/Mac_Laptop.jpg') no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+            position: relative;
+        }
+        .hero h1 {
+            font-size: 60px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        .hero .btn-primary {
+            background-color: #f39c12;
+            border-radius: 50px;
+            padding: 10px 30px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+        .hero .btn-primary:hover {
+            background-color: #e67e22;
+            transform: scale(1.1);
+        }
+
+        /* Price Range Filter */
+        .price-range {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            transition: all 0.3s ease-in-out;
+        }
+        .price-range:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .price-range h3 {
+            font-size: 24px;
+            color: #34495e;
+        }
+        .price-range .range-input {
+            width: 100%;
+        }
+
+        /* Product Section */
+        .catalog {
+            padding: 50px 20px;
+            text-align: center;
+            animation: slideIn 2s ease-out;
+        }
+        .catalog h2 {
+            font-size: 36px;
+            color: #2c3e50;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 30px;
+            animation: fadeUp 1.5s ease-in-out;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .product-card img {
+            width: 100%;
+            border-radius: 15px;
+        }
+        .product-card .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+        .product-card .card-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #34495e;
+        }
+        .product-card .card-text {
+            font-size: 18px;
+            color: #e74c3c;
+        }
+        .product-card .btn-info {
+            background-color: #f39c12;
+            border-radius: 25px;
+            padding: 10px 30px;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+        .product-card .btn-info:hover {
+            background-color: #e67e22;
+            transform: scale(1.05);
+        }
+
+        .product-card .btn-cart {
+            background-color: #27ae60;
+            border-radius: 25px;
+            padding: 10px 30px;
+            color: white;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .product-card .btn-cart:hover {
+            background-color: #2ecc71;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #34495e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeUp {
+            0% { transform: translateY(50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateY(100px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">LaptopShop</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Shop The Latest Laptops</h1>
+        <p>Find the best deals on laptops from top brands.</p>
+        <a href="#catalog" class="btn btn-primary">Browse Catalog</a>
+    </div>
+
+    <!-- Price Range Filter -->
+    <div class="container price-range">
+        <h3>Filter by Price</h3>
+        <input type="range" min="0" max="3000" value="1000" class="range-input" id="priceRange" oninput="updatePriceRange()">
+        <p>Price: $<span id="priceValue">1000</span></p>
+    </div>
+
+    <!-- Product Catalog -->
+    <div class="container catalog" id="catalog">
+        <h2>Our Laptops</h2>
+        <div class="row">
+            <!-- Product 1 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="https://m.media-amazon.com/images/I/71jG+e7roXL._SX679_.jpg" alt="Laptop 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Apple MacBook Air Laptop</h5>
+                        <p class="card-text">₹1,00,000</p>
+                        <a href="#" class="btn btn-info">Buy Now</a>
+                        <a href="addtocart.html" class="btn btn-cart">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="https://m.media-amazon.com/images/I/41yrK+cYvJL._SY300_SX300_.jpg" alt="Laptop 2">
+                    <div class="card-body">
+                        <h5 class="card-title">HP 15 Intel Core i5 13th Gen</h5>
+                        <p class="card-text"> ₹54,600</p>
+                        <a href="#" class="btn btn-info">Buy Now</a>
+                        <a href="addtocart.html" class="btn btn-cart">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="https://www.networkhardwares.com/cdn/shop/files/1081034218_1900x.jpg?v=1721083782" alt="Laptop 3">
+                    <div class="card-body">
+                        <h5 class="card-title">HP ProBook 440 G11 14" Touchscreen Notebook</h5>
+                        <p class="card-text">₹64,990</p>
+                        <a href="#" class="btn btn-info">Buy Now</a>
+                        <a href="addtocart.html" class="btn btn-cart">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 LaptopShop. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+    <script>
+        function updatePriceRange() {
+            let price = document.getElementById('priceRange').value;
+            document.getElementById('priceValue').textContent = price;
+        }
+    </script>
+
+</body>
+</html>

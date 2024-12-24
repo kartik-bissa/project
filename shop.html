@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Gadget Zone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7fb;
+    margin: 0;
+    padding: 0;
+    color: #2c3e50;
+}
+
+/* Navbar Styling */
+header {
+    background-color: #333;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    color: #f39c12;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.navbar-nav .nav-link {
+    color: #ecf0f1 !important;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f39c12 !important;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url(https://poonawallafincorp.com/pfca/assets/blog_banner/blog_banner-banner-image-financing-tech-a-guide-to-loans-for-gadgets.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    color: #000;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #e74c3c;
+}
+
+.hero .btn-primary {
+    background-color: #4b320427;
+    border-radius: 25px;
+    padding: 15px 40px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    align-content: end;
+    margin-top: 27%;
+    margin-right: 40%;
+}
+
+.hero .btn-primary:hover {
+    background-color: #e67e22;
+}
+
+/* Product Catalog Section */
+.catalog {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-top: 30px;
+}
+
+.catalog h2 {
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 50px;
+}
+
+/* Product Card */
+.product-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.product-card .card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-card .card-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+.product-card .card-text {
+    font-size: 18px;
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+
+.product-card .btn-info {
+    background-color: #f39c12;
+    border-radius: 25px;
+    padding: 10px 30px;
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.product-card .btn-info:hover {
+    background-color: #e67e22;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(100px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Gadget Zone</a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="C:\Users\HP\Desktop\KARTIK\index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="C:\Users\HP\Desktop\KARTIK\shop.html">Shop</a></li>
+                        <li class="nav-item"><a class="nav-link" href="C:\Users\HP\Desktop\KARTIK\aboutus.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Shop The Latest Gadgets!!!</h1>
+        <a href="#catalog" class="btn btn-primary">Browse Our Collection</a>
+    </div>
+
+    <!-- Product Catalog -->
+    <div class="container catalog" id="catalog">
+        <h2>Featured Products</h2>
+        <div class="row">
+            <!-- Product 1 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="https://i.pcmag.com/imagery/roundup-products/076ltpzR92DgluAZXP6me01.fit_lim.size_919x518.v1647875780.jpg" alt="Laptop 1">
+                    <div class="card-body">
+                        <a href="addtocart.html" class="btn btn-info">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RW1npTP?ver=829f" alt="Laptop 2">
+                    <div class="card-body">
+                        <a href="addtocart.html" class="btn btn-info">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="https://hmadmin.hamleys.in/product/493174788/665/493174788-1.jpg" alt="Laptop 3">
+                    <div class="card-body">
+                        <a href="addtocart.html" class="btn btn-info">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+             <!-- Product 4 -->
+             <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="https://preview.redd.it/airpods-4-are-here-v0-fnvtzrufjtnd1.jpeg?width=640&crop=smart&auto=webp&s=8dd0479a8b4312e3fbbae0fb9a7c47a102ab3e6a" alt="Laptop 4">
+                    <div class="card-body">
+                        <a href="addtocart.html" class="btn btn-info">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+             <!-- Product 5 -->
+             <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="https://www.alifstores.com/media/catalog/product/4/m/4mm08040020170pnk_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700" alt="Laptop 5">
+                    <div class="card-body">
+                        <a href="addtocart.html" class="btn btn-info">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+             <!-- Product 6 -->
+             <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="https://www.shutterstock.com/image-vector/tech-small-pen-drive-device-260nw-497914708.jpg" alt="Laptop 6">
+                    <div class="card-body">
+                        <a href="addtocart.html" class="btn btn-info">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-4">
+        <p>&copy; 2024 Gadget Zone. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
